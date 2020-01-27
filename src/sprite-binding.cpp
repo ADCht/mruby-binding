@@ -260,22 +260,6 @@ mrb_value SpriteSetWaveAmp(mrb_state* mrb, mrb_value self)
 	return mrb_nil_value();
 }
 
-mrb_value SpriteGetWaveAmp(mrb_state* mrb, mrb_value self)
-{
-	// TODO: add your code here.
-
-	return mrb_nil_value();
-}
-
-mrb_value SpriteSetWaveAmp(mrb_state* mrb, mrb_value self)
-{
-	mrb_int value = 0;
-	mrb_get_args(mrb, "i", &value);
-	// TODO: add your code here.
-
-	return mrb_nil_value();
-}
-
 mrb_value SpriteGetWaveLength(mrb_state* mrb, mrb_value self)
 {
 	// TODO: add your code here.
