@@ -45,6 +45,9 @@
     <ClCompile Include="..\src\tone-binding.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\viewport-binding.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\bitmap-binding.h">
@@ -69,6 +72,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\tone-binding.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\viewport-binding.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
