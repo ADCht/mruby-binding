@@ -4,20 +4,20 @@ mrb_value ColorInitialize(mrb_state* mrb, mrb_value self)
 {
 	if (mrb_get_argc(mrb))
 	{
-		mrb_int red = 0;
-		mrb_int green = 0;
-		mrb_int blue = 0;
-		mrb_int alpha = 255;
-		mrb_get_args(mrb, "iii|i", &red, &green, &blue, &alpha);
+		mrb_float red = 0;
+		mrb_float green = 0;
+		mrb_float blue = 0;
+		mrb_float alpha = 255;
+		mrb_get_args(mrb, "fff|f", &red, &green, &blue, &alpha);
 		// TODO: add your code here.
 
 	}
 	else
 	{
-		mrb_int red = 0;
-		mrb_int green = 0;
-		mrb_int blue = 0;
-		mrb_int alpha = 0;
+		mrb_float red = 0;
+		mrb_float green = 0;
+		mrb_float blue = 0;
+		mrb_float alpha = 0;
 		// TODO: add your code here.
 
 	}
@@ -35,11 +35,11 @@ mrb_value ColorSet(mrb_state* mrb, mrb_value self)
 	}
 	else
 	{
-		mrb_int red = 0;
-		mrb_int green = 0;
-		mrb_int blue = 0;
-		mrb_int alpha = 255;
-		mrb_get_args(mrb, "iii|i", &red, &green, &blue, &alpha);
+		mrb_float red = 0;
+		mrb_float green = 0;
+		mrb_float blue = 0;
+		mrb_float alpha = 255;
+		mrb_get_args(mrb, "fff|f", &red, &green, &blue, &alpha);
 		// TODO: add your code here.
 
 	}
@@ -55,8 +55,8 @@ mrb_value ColorGetRed(mrb_state* mrb, mrb_value self)
 
 mrb_value ColorSetRed(mrb_state* mrb, mrb_value self)
 {
-	mrb_int red = 0;
-	mrb_get_args(mrb, "i", &red);
+	mrb_float red = 0;
+	mrb_get_args(mrb, "f", &red);
 	if (red > 255) red = 255;
 	if (red < 0) red = 0;
 	// TODO: add your code here.
@@ -73,8 +73,8 @@ mrb_value ColorGetGreen(mrb_state* mrb, mrb_value self)
 
 mrb_value ColorSetGreen(mrb_state* mrb, mrb_value self)
 {
-	mrb_int green = 0;
-	mrb_get_args(mrb, "i", &green);
+	mrb_float green = 0;
+	mrb_get_args(mrb, "f", &green);
 	if (green > 255) green = 255;
 	if (green < 0) green = 0;
 	// TODO: add your code here.
@@ -91,8 +91,8 @@ mrb_value ColorGetBlue(mrb_state* mrb, mrb_value self)
 
 mrb_value ColorSetBlue(mrb_state* mrb, mrb_value self)
 {
-	mrb_int blue = 0;
-	mrb_get_args(mrb, "i", &blue);
+	mrb_float blue = 0;
+	mrb_get_args(mrb, "f", &blue);
 	if (blue > 255) blue = 255;
 	if (blue < 0) blue = 0;
 	// TODO: add your code here.
@@ -109,8 +109,8 @@ mrb_value ColorGetAlpha(mrb_state* mrb, mrb_value self)
 
 mrb_value ColorSetAlpha(mrb_state* mrb, mrb_value self)
 {
-	mrb_int alpha = 0;
-	mrb_get_args(mrb, "i", &alpha);
+	mrb_float alpha = 0;
+	mrb_get_args(mrb, "f", &alpha);
 	if (alpha > 255) alpha = 255;
 	if (alpha < 0) alpha = 0;
 	// TODO: add your code here.

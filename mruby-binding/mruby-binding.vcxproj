@@ -156,6 +156,7 @@
     <ClCompile Include="..\src\rect-binding.cpp" />
     <ClCompile Include="..\src\sprite-binding.cpp" />
     <ClCompile Include="..\src\table-binding.cpp" />
+    <ClCompile Include="..\src\tone-binding.cpp" />
     <ClCompile Include="mruby-binding.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +167,7 @@
     <ClInclude Include="..\src\rect-binding.h" />
     <ClInclude Include="..\src\sprite-binding.h" />
     <ClInclude Include="..\src\table-binding.h" />
+    <ClInclude Include="..\src\tone-binding.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
