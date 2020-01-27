@@ -244,14 +244,126 @@ mrb_value SpriteSetAngle(mrb_state* mrb, mrb_value self)
 	return mrb_nil_value();
 }
 
-mrb_value SpriteGetZoomY(mrb_state* mrb, mrb_value self)
+mrb_value SpriteGetWaveAmp(mrb_state* mrb, mrb_value self)
 {
 	// TODO: add your code here.
 
 	return mrb_nil_value();
 }
 
-mrb_value SpriteSetZoomY(mrb_state* mrb, mrb_value self)
+mrb_value SpriteSetWaveAmp(mrb_state* mrb, mrb_value self)
+{
+	mrb_int value = 0;
+	mrb_get_args(mrb, "i", &value);
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteGetWaveAmp(mrb_state* mrb, mrb_value self)
+{
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteSetWaveAmp(mrb_state* mrb, mrb_value self)
+{
+	mrb_int value = 0;
+	mrb_get_args(mrb, "i", &value);
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteGetWaveLength(mrb_state* mrb, mrb_value self)
+{
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteSetWaveLength(mrb_state* mrb, mrb_value self)
+{
+	mrb_int value = 0;
+	mrb_get_args(mrb, "i", &value);
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteGetWaveSpeed(mrb_state* mrb, mrb_value self)
+{
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteSetWaveSpeed(mrb_state* mrb, mrb_value self)
+{
+	mrb_int value = 0;
+	mrb_get_args(mrb, "i", &value);
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteGetWavePhase(mrb_state* mrb, mrb_value self)
+{
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteSetWavePhase(mrb_state* mrb, mrb_value self)
+{
+	mrb_int value = 0;
+	mrb_get_args(mrb, "i", &value);
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteGetMirror(mrb_state* mrb, mrb_value self)
+{
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteSetMirror(mrb_state* mrb, mrb_value self)
+{
+	mrb_bool value = 0;
+	mrb_get_args(mrb, "b", &value);
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteGetBushDepth(mrb_state* mrb, mrb_value self)
+{
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteSetBushDepth(mrb_state* mrb, mrb_value self)
+{
+	mrb_int value = 0;
+	mrb_get_args(mrb, "i", &value);
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteGetBushOpacity(mrb_state* mrb, mrb_value self)
+{
+	// TODO: add your code here.
+
+	return mrb_nil_value();
+}
+
+mrb_value SpriteSetBushOpacity(mrb_state* mrb, mrb_value self)
 {
 	mrb_int value = 0;
 	mrb_get_args(mrb, "i", &value);
