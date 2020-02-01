@@ -1,5 +1,7 @@
 #include "table-binding.h"
 
+#include "binding-util.h"
+
 Table::Table(int x, int y /*= 1*/, int z /*= 1*/)
 	: xs(x), ys(y), zs(z),
 	data(x* y* z)
@@ -66,12 +68,14 @@ void Table::resize(int x)
 
 mrb_value TableInitialize(mrb_state* mrb, mrb_value self)
 {
+	GET_OBJ_TYPE(Table);
 	mrb_int x, y, z;
 	x = y = z = 1;
 	mrb_get_args(mrb, "i|ii", &x, &y, &z);
 
 	Table* t = new Table(x, y, z);
-	
+
+	setPrivateData(self, t, TableType);
 	mrb_iv_set(mrb, self, mrb_intern_lit(mrb, "pointer"), mrb_fixnum_value((int)(void*)t));
 
 	return self;
@@ -79,8 +83,7 @@ mrb_value TableInitialize(mrb_state* mrb, mrb_value self)
 
 mrb_value TableResize(mrb_state* mrb, mrb_value self)
 {
-	mrb_value pointer = mrb_iv_get(mrb, self, mrb_intern_lit(mrb, "pointer"));
-	Table* t = (Table*)mrb_int(mrb, pointer);
+	Table* t = getPrivateData<Table>(mrb, self);
 
 	mrb_int x, y, z;
 	mrb_get_args(mrb, "i|ii", &x, &y, &z);
@@ -100,32 +103,28 @@ mrb_value TableResize(mrb_state* mrb, mrb_value self)
 
 mrb_value TableXSize(mrb_state* mrb, mrb_value self)
 {
-	mrb_value pointer = mrb_iv_get(mrb, self, mrb_intern_lit(mrb, "pointer"));
-	Table* t = (Table*)mrb_int(mrb, pointer);
+	Table* t = getPrivateData<Table>(mrb, self);
 
 	return mrb_fixnum_value(t->xSize());
 }
 
 mrb_value TableYSize(mrb_state* mrb, mrb_value self)
 {
-	mrb_value pointer = mrb_iv_get(mrb, self, mrb_intern_lit(mrb, "pointer"));
-	Table* t = (Table*)mrb_int(mrb, pointer);
+	Table* t = getPrivateData<Table>(mrb, self);
 
 	return mrb_fixnum_value(t->ySize());
 }
 
 mrb_value TableZSize(mrb_state* mrb, mrb_value self)
 {
-	mrb_value pointer = mrb_iv_get(mrb, self, mrb_intern_lit(mrb, "pointer"));
-	Table* t = (Table*)mrb_int(mrb, pointer);
+	Table* t = getPrivateData<Table>(mrb, self);
 
 	return mrb_fixnum_value(t->zSize());
 }
 
 mrb_value TableGet(mrb_state* mrb, mrb_value self)
 {
-	mrb_value pointer = mrb_iv_get(mrb, self, mrb_intern_lit(mrb, "pointer"));
-	Table* t = (Table*)mrb_int(mrb, pointer);
+	Table* t = getPrivateData<Table>(mrb, self);
 
 	mrb_int x, y, z;
 	x = y = z = 0;
@@ -146,8 +145,7 @@ mrb_value TableGet(mrb_state* mrb, mrb_value self)
 
 mrb_value TableSet(mrb_state* mrb, mrb_value self)
 {
-	mrb_value pointer = mrb_iv_get(mrb, self, mrb_intern_lit(mrb, "pointer"));
-	Table* t = (Table*)mrb_int(mrb, pointer);
+	Table* t = getPrivateData<Table>(mrb, self);
 
 	int argc;
 	mrb_value* argv;

@@ -51,6 +51,9 @@
     <ClCompile Include="..\src\graphics-binding.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\binding-util.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\bitmap-binding.h">
@@ -81,6 +84,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\graphics-binding.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\binding-util.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

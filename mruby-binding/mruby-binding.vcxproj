@@ -149,6 +149,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\binding-util.cpp" />
     <ClCompile Include="..\src\bitmap-binding.cpp" />
     <ClCompile Include="..\src\color-binding.cpp" />
     <ClCompile Include="..\src\font-binding.cpp" />
@@ -162,6 +163,7 @@
     <ClCompile Include="mruby-binding.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\binding-util.h" />
     <ClInclude Include="..\src\bitmap-binding.h" />
     <ClInclude Include="..\src\color-binding.h" />
     <ClInclude Include="..\src\font-binding.h" />
